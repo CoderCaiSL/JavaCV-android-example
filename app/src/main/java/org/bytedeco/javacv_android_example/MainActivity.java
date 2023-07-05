@@ -12,6 +12,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import org.bytedeco.javacv_android_example.record.RecordActivity;
+import org.bytedeco.javacv_android_example.record.ago.RtActivity;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -31,6 +32,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, RecordActivity.class));
+            }
+        });
+        findViewById(R.id.btn_ago).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, RtActivity.class));
             }
         });
         if (!allPermissionsGranted()) {
